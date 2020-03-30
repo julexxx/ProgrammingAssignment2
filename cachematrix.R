@@ -13,7 +13,7 @@ makeCacheMatrix <- function(x = matrix()) { ## define the argument with default 
     x <<- y                             ## value of matrix in parent environment
     inv <<- NULL                        ## if there is a new matrix, reset inv to NULL
   }
-  get <- function() x                     ## define the get function - returns value of the matrix argument
+  get <- function() x                     ## define the get function: returns value of the matrix argument
   
   setinverse <- function(inverse) inv <<- inverse  ## assigns value of inv in the parent environment
   getinverse <- function() inv                     ## gets the value of inv where called
@@ -22,7 +22,7 @@ makeCacheMatrix <- function(x = matrix()) { ## define the argument with default 
 
 ## Write a short comment describing this function
 
-#  This function computes the inverse of the special "matrix" 
+# This function computes the inverse of the special "matrix" 
 # returned by makeCacheMatrix above. 
 # If the inverse has already been calculated (and the matrix has not changed), 
 # then the cachesolve should retrieve the inverse from the cache.
